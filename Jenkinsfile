@@ -3,7 +3,10 @@ node {
     stage('Git Clone') {
  	   git credentialsId: 'git_pass', url: 'https://github.com/kartikeyapro/ks.git'	 
        }
-    stage('Maven Clean') {
+   stage('mvn version') {
+   	mvn --version
+   }
+   stage('Maven Clean') {
 		sh '''mvn clean'''       
     }
     stage('Maven Validate') {
