@@ -4,7 +4,7 @@ node {
  	   git credentialsId: 'git_pass', url: 'https://github.com/kartikeyapro/ks.git'	 
        }
    stage('mvn version') {
-   	mvn --version
+   	sh 'mvn --version'
    }
    stage('Maven Clean') {
 		sh '''mvn clean'''       
