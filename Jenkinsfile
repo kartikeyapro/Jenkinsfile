@@ -15,10 +15,10 @@ node {
     stage('Maven Compile') {
 		sh '''mvn compile'''  
     }
-    stage('Maven Test) {
+    stage('Maven Test') {
 		sh '''mvn test''' 
     }
-	stage('Maven Package) {
+	stage('Maven Package') {
 		sh '''mvn package''' 
     }
 }
