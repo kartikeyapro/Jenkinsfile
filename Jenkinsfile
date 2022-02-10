@@ -28,7 +28,7 @@ pipeline {
             } }		
     stage('SonarQube CodeScan'){
             steps {
-            sh 'mvn sonar:sonar -Dsonar.host.url=http://10.128.15.217:9000 -Dsonar.login=ea5b0806baace67b284584c5639f6ff6e4b44ea4'    
+            sh 'mvn sonar:sonar -Dsonar.host.url=http://104.154.92.41:9000 -Dsonar.login=ea5b0806baace67b284584c5639f6ff6e4b44ea4'    
             }
     }
     
