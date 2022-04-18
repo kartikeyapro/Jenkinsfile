@@ -5,23 +5,23 @@ node {
     }
     
     stage('Maven Clean') { 
-      sh 'mvn clean'
+      powershell 'mvn clean'
     }
 	
 	stage('Maven Validate') { 
-      sh 'mvn validate'
+      powershell 'mvn validate'
     }
 	
 	stage('Maven Compile') { 
-      sh 'mvn compile'
+      powershell 'mvn compile'
     }
 	
 	stage('Maven Test') { 
-      sh 'mvn test'
+      powershell 'mvn test'
     }
 	
 	stage('Maven Package') { 
-      sh 'mvn package'
+      powershell 'mvn package'
     }
 	
 }	
