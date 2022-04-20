@@ -8,6 +8,11 @@ node {
       sh 'mvn clean'
     }
 	
+	stage ('Maven Version')
+	{
+		sh 'mvn --version'
+	}
+	
 	stage('Maven Validate') { 
       sh 'mvn validate'
     }
