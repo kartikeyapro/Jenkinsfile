@@ -1,0 +1,4 @@
+
+
+ID=$(curl http://34.121.22.141:8081/repository/maven-snapshots/com/ksapp/ks/maven-metadata.xml | grep SNAP | sed 's/<version>//' |sed 's/<\/version>//' | tail -n1 | xargs -n1)
+VER=$(curl http://34.121.22.141:8081/repository/maven-snapshots/com/ksapp/ks/$ID/maven-metadata.xml | grep value | sed 's/<value>//' | sed 's/<\/value>//' |tail -n1 | xargs -n1)
