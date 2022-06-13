@@ -34,9 +34,6 @@ node {
       sh 'mvn package'
     }
 	
-	stage('Maven Deploy') { 
-      sh 'mvn deploy'
-    }
 }	
 
     
