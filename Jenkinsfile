@@ -29,12 +29,7 @@ node {
 	stage('Maven Package') { 
       sh 'mvn package'
     }
-	stage('Release to aws') {
-    
-            withAWS(region:'us-east-1', credentials:'ksstore'){
-                s3Upload(bucket:"ksstore", workingDir:'target', target/*.war'); // pick your jar or whatever you need
-            
-        }
+	
 	
 }	
 
