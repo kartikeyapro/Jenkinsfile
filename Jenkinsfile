@@ -30,10 +30,10 @@ node {
       sh 'mvn package'
     }
 	stage('Release to aws') {
-        steps {
+    
             withAWS(region:'us-east-1', credentials:'ksstore'){
                 s3Upload(bucket:"ksstore", workingDir:'target', target/*.war'); // pick your jar or whatever you need
-            }
+            
         }
 	
 }	
